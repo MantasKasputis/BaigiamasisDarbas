@@ -156,4 +156,27 @@ public class Common {
     public static void sendKeysToAlert(String keys) {
         Driver.getDriver().switchTo().alert().sendKeys(keys);
     }
+
+    public static void simulateMouseMovement(By locator1, By locator2) {
+        WebElement element1 = getElement(locator1);
+        WebElement element2 = getElement(locator2);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element1);
+        actions.moveByOffset(10,25);
+        actions.moveToElement(element2);
+        actions.perform();
+    }
+
+    public static void switchToNewWindow() {
+
+        for(String winHandle : Driver.getDriver().getWindowHandles()){
+            Driver.getDriver().switchTo().window(winHandle);
+        }
+
+    }
+
+    public static void storeCurrentWindowHandle() {
+        String windowHandleBefore = Driver.getDriver().getWindowHandle();
+    }
 }
