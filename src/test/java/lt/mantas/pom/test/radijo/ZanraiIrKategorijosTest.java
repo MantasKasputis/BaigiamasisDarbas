@@ -1,5 +1,6 @@
 package lt.mantas.pom.test.radijo;
 
+import lt.mantas.pom.pages.radijo.HomePages;
 import lt.mantas.pom.pages.radijo.ZanraiIrKategorijosPages;
 import lt.mantas.pom.test.TestBase;
 import org.testng.Assert;
@@ -13,7 +14,7 @@ public class ZanraiIrKategorijosTest extends TestBase {
         String expectedPageTitle = "Radijo stotis „Rock FM“ tiesiogiai internetu";
         String actualPageTitle;
 
-        ZanraiIrKategorijosPages.clickOnZanraiIrKategorijosPage();
+        HomePages.clickOnZanraiIrKategorijosPageButton();
         ZanraiIrKategorijosPages.clickOnRockGenreFilter();
         ZanraiIrKategorijosPages.clickOnRadioOptionRockFm();
 
@@ -31,18 +32,12 @@ public class ZanraiIrKategorijosTest extends TestBase {
     @Test
     public void testPlayingRadioRockFmFromNewWindow() {
 
-        ZanraiIrKategorijosPages.clickOnZanraiIrKategorijosPage();
-
+        HomePages.clickOnZanraiIrKategorijosPageButton();
         ZanraiIrKategorijosPages.clickOnRockGenreFilter();
-
         ZanraiIrKategorijosPages.clickOnRadioOptionRockFm();
 
-        ZanraiIrKategorijosPages.getAndStoreCurrentWindowHandle();
-
         ZanraiIrKategorijosPages.simulateMouseMovement();
-
         ZanraiIrKategorijosPages.sleep(2000);
-
         ZanraiIrKategorijosPages.simulateMouseMovement();
 
         ZanraiIrKategorijosPages.clickOnButtonPlayRockFm();
@@ -52,7 +47,7 @@ public class ZanraiIrKategorijosTest extends TestBase {
 
         ZanraiIrKategorijosPages.clickOnPlayRadioOnNewWindow();
         ZanraiIrKategorijosPages.sleep(1000);
-
+        ZanraiIrKategorijosPages.clickOnStopPlayRadioOnNewWindow();
+        ZanraiIrKategorijosPages.sleep(1000);
     }
-
 }

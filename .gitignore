@@ -3,9 +3,8 @@
 /.idea/workspace.xml
 
 # IntelliJ
-.idea
 target
-test-output
+.idea
 screenshots
 
 # Compiled class file

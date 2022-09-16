@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Radijo.lt" parallel="methods" thread-count="4">
+    <test name="Regression">
+        <classes>
+            <class name="lt.mantas.pom.test.radijo.HomeTest"/>
+            <class name="lt.mantas.pom.test.radijo.ZanraiIrKategorijosTest"/>
+            <class name="lt.mantas.pom.test.radijo.OnAirTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

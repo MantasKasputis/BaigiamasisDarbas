@@ -13,12 +13,6 @@ public class ZanraiIrKategorijosPages {
         }
     }
 
-    public static void clickOnZanraiIrKategorijosPage() {
-        Common.clickElement(
-                Locators.ZanraiIrKategorijos.buttonZanraiIrKategorijosFromHomepage
-        );
-    }
-
     public static void clickOnRockGenreFilter() {
         Common.clickElement(
                 Locators.ZanraiIrKategorijos.buttonGenreFilterRock
@@ -48,23 +42,21 @@ public class ZanraiIrKategorijosPages {
         Common.switchToNewWindow();
     }
 
-    public static void getAndStoreCurrentWindowHandle() {
-        Common.storeCurrentWindowHandle();
-    }
-
     public static void clickOnPlayRadioOnNewWindow() {
         Common.clickElement(
                 Locators.ZanraiIrKategorijos.buttonPlayRadioRockFmNewWindow
         );
     }
 
-    public static void closeNewWindow() {
-        Common.closeDriver();
-    }
-
     public static String readPageRockFmTitle() {
         return Common.getElementText(
                 Locators.ZanraiIrKategorijos.paragraphPageHeaderTitleRadijoStotisRockFm
+        );
+    }
+
+    public static void clickOnStopPlayRadioOnNewWindow() {
+        Common.clickElementByAction(
+                Locators.ZanraiIrKategorijos.buttonStopPlayRadioRockFmNewWindow
         );
     }
 }

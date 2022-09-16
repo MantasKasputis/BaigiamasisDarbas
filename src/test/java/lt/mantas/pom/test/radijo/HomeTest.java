@@ -16,36 +16,33 @@ public class HomeTest extends TestBase {
         HomePages.clickOnTitleLogoHyperlink();
         HomePages.sleep(1000);
         actualTitle = HomePages.readHomepageHeaderTitle();
+        Assert.assertEquals(actualTitle, expectedTitle);
 
-        Assert.assertEquals(actualTitle,expectedTitle);
+        HomePages.clickOnMenuOptionRadijas();
+        HomePages.sleep(1000);
+        actualTitle = HomePages.readHomepageHeaderTitle();
+        Assert.assertEquals(actualTitle, expectedTitle);
     }
 
     @Test
-    public void testRadijoStociuPaieska(){
+    public void testRadijoStociuPaieska() {
 
-        String expectedSelectedOption = "Pagal pavadinimą A-Z";
-        String actualSelectedOption;
+        String messageToRusiavimas = "Pagal pavadinimą A-Z";
+        String messageToIeskotiPagalPavadinima = "Rock";
+        String messageToValstybe = "Lietuva";
+        String messageToMiestai = "Vilnius";
+        String messageToZanrai = "Rock";
 
-        String expectedTrue = "Ieškoti pagal pavadinimą";
-        String actualTrue;
 
-        HomePages.waitForSearchButtonRadijoStociuPaieskaToBeClickable();
-
-        HomePages.doubleClickOnRadijoStociuPaieska();
-
+        HomePages.simulateMouseMovement();
         HomePages.sleep(3000);
-//        HomePages.clickOnRadijoStociuPaieska();
 
-        actualTrue = HomePages.actualTrueMessageOfActiveSearch();
-
-        HomePages.checkIfTrue(actualTrue,expectedTrue);
-
-
-        HomePages.selectedOptionFromDropboxRusiavimas(expectedSelectedOption);
-        HomePages.sleep(1000);
-        HomePages.selectedOptionFromDropboxRusiavimas(expectedSelectedOption);
-        HomePages.sleep(1000);
-
-
+        HomePages.clickOnRadijoStociuPaieska();
+        HomePages.clickOnDropboxRusiavimas();
+        HomePages.enterMessageToFieldRusiavimas(messageToRusiavimas);
+        HomePages.enterMessageToFieldIeskotiPagalPavadinima(messageToIeskotiPagalPavadinima);
+        HomePages.enterMessageToFieldValstybes(messageToValstybe);
+        HomePages.enterMessageToFieldMiestai(messageToMiestai);
+        HomePages.enterMessageToFieldZanrai(messageToZanrai);
     }
 }

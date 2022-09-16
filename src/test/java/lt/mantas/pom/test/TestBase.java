@@ -2,19 +2,17 @@ package lt.mantas.pom.test;
 
 import lt.mantas.pom.pages.Common;
 import lt.mantas.pom.utils.TestListener;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.*;
 
 @Listeners(TestListener.class)
 public class TestBase {
 
-    @BeforeTest
+    @BeforeClass
     public void setUp(){
         Common.openUrl("https://www.radijo.lt/");
     }
 
-    @AfterTest
+    @AfterClass
     public void tearDown() {
         Common.closeDriver();
     }
