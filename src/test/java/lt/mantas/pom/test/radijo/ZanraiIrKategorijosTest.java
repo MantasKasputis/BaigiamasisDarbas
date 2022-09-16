@@ -41,7 +41,7 @@ public class ZanraiIrKategorijosTest extends TestBase {
         ZanraiIrKategorijosPages.simulateMouseMovement();
 
         ZanraiIrKategorijosPages.clickOnButtonPlayRockFm();
-        ZanraiIrKategorijosPages.sleep(2000);
+        ZanraiIrKategorijosPages.sleep(1000);
 
         ZanraiIrKategorijosPages.switchToNewWindow();
 
