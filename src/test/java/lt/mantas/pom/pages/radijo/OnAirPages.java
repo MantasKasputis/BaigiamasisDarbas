@@ -30,4 +30,11 @@ public class OnAirPages {
                 Locators.OnAir.latestTopTenthMusicVideoInOnAirPage
         );
     }
+
+    public static String readButtonTitleYoutube(String value) {
+        return Common.getElementAttributeValue(
+                Locators.OnAir.closeButtonOnVideo,
+                value
+        );
+    }
 }

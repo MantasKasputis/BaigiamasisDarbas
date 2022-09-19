@@ -59,4 +59,8 @@ public class Common {
             Driver.getDriver().switchTo().window(winHandle);
         }
     }
+
+    public static String getElementAttributeValue(By locator, String attributeName) {
+        return getElement(locator).getAttribute(attributeName);
+    }
 }

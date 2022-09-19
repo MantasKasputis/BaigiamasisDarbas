@@ -33,6 +33,8 @@ public class HomeTest extends TestBase {
         String messageToMiestai = "Vilnius";
         String messageToZanrai = "Rock";
 
+        String expectedText = "Surasta 3";
+        String actualText;
 
         HomePages.simulateMouseMovement();
         HomePages.sleep(3000);
@@ -44,5 +46,10 @@ public class HomeTest extends TestBase {
         HomePages.enterMessageToFieldValstybes(messageToValstybe);
         HomePages.enterMessageToFieldMiestai(messageToMiestai);
         HomePages.enterMessageToFieldZanrai(messageToZanrai);
+
+        HomePages.sleep(3000);
+
+        actualText = HomePages.readMessage();
+        Assert.assertEquals(actualText, expectedText);
     }
 }

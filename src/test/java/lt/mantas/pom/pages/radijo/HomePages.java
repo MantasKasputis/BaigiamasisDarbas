@@ -15,85 +15,91 @@ public class HomePages {
 
     public static void clickOnTitleLogoHyperlink() {
         Common.clickElement(
-                Locators.Radijo.titleLogoText
+                Locators.Home.titleLogoText
         );
     }
 
     public static String readHomepageHeaderTitle() {
         return Common.getElementText(
-                Locators.Radijo.paragraphHomeHeaderTitle
+                Locators.Home.paragraphHomeHeaderTitle
         );
     }
 
     public static void clickOnRadijoStociuPaieska() {
         Common.clickElementByAction(
-                Locators.Radijo.buttonRadijoStociuPaieska
+                Locators.Home.buttonRadijoStociuPaieska
         );
     }
 
     public static void simulateMouseMovement() {
         Common.simulateMouseMovement(
-                Locators.Radijo.titleLogoText,
-                Locators.Radijo.paragraphHomeHeaderTitle
+                Locators.Home.titleLogoText,
+                Locators.Home.paragraphHomeHeaderTitle
         );
     }
 
     public static void clickOnDropboxRusiavimas() {
         Common.clickElementByAction(
-                Locators.Radijo.dropBoxSelectionRusiavimas
+                Locators.Home.dropBoxSelectionRusiavimas
         );
     }
 
     public static void clickOnZanraiIrKategorijosPageButton() {
         Common.clickElement(
-                Locators.Radijo.buttonZanraiIrKategorijos
+                Locators.Home.buttonZanraiIrKategorijos
         );
     }
 
     public static void clickButtonOnAirPage() {
         Common.clickElement(
-                Locators.Radijo.buttonOnAir
+                Locators.Home.buttonOnAir
         );
     }
 
     public static void clickOnMenuOptionRadijas() {
         Common.clickElement(
-                Locators.Radijo.menuOptionRadijas
+                Locators.Home.menuOptionRadijas
         );
     }
 
     public static void enterMessageToFieldRusiavimas(String keys) {
         Common.sendKeysToElement(
-                Locators.Radijo.fieldSortByRusiavimas,
+                Locators.Home.fieldSortByRusiavimas,
                 keys
         );
     }
 
     public static void enterMessageToFieldIeskotiPagalPavadinima(String keys) {
         Common.sendKeysToElement(
-                Locators.Radijo.fieldSearchIeskotiPagalPavadinima,
+                Locators.Home.fieldSearchIeskotiPagalPavadinima,
                 keys
         );
     }
 
     public static void enterMessageToFieldValstybes(String keys) {
         Common.sendKeysToElement(
-                Locators.Radijo.fieldSearchValstybes,
+                Locators.Home.fieldSearchValstybes,
                 keys
         );
     }
 
     public static void enterMessageToFieldMiestai(String keys) {
         Common.sendKeysToElement(
-                Locators.Radijo.fieldSearchMiestai,
+                Locators.Home.fieldSearchMiestai,
                 keys
         );
     }
 
     public static void enterMessageToFieldZanrai(String keys) {
         Common.sendKeysToElement(
-                Locators.Radijo.fieldSearchMZanrai,
+                Locators.Home.fieldSearchMZanrai,
                 keys
+        );
+    }
+
+    public static String readMessage() {
+        return Common.getElementText(
+                Locators.Home.paragraphSearchResultCount
         );
     }
 }

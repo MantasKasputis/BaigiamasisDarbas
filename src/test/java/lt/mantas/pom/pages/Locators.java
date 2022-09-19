@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
-    public static class Radijo {
+    public static class Home {
         public static By titleLogoText = By.xpath("//*[@class='text']");
         public static By menuOptionRadijas = By.xpath("(//span[@class='title'])[1]");
         public static By paragraphHomeHeaderTitle = By.xpath("//*[@class='page-title max_width_991_mb_5']");
@@ -21,6 +21,7 @@ public class Locators {
         public static By fieldSearchValstybes = By.xpath("(//input[@class='select2-search__field'])[1]");
         public static By fieldSearchMiestai = By.xpath("(//input[@class='select2-search__field'])[2]");
         public static By fieldSearchMZanrai = By.xpath("(//input[@class='select2-search__field'])[3]");
+        public static By paragraphSearchResultCount = By.xpath("(//div[@class='col-md-4 mb-10'])[1]");
     }
 
     public static class ZanraiIrKategorijos {
@@ -39,6 +40,7 @@ public class Locators {
         public static By buttonStopPlayRadioRockFmNewWindow = By.xpath(
                 "//a[@class='btn_play_stop btn_radio_player_play_stop mr-10 playing']"
         );
+        public static By paragraphPlayWindowTitleRockFm = By.xpath("//strong[@class='mr-10 radiostation-title']/div");
     }
 
     public static class OnAir {

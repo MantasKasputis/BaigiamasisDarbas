@@ -59,4 +59,10 @@ public class ZanraiIrKategorijosPages {
                 Locators.ZanraiIrKategorijos.buttonStopPlayRadioRockFmNewWindow
         );
     }
+
+    public static String readPlayWindowTitleRockFm() {
+        return Common.getElementText(
+                Locators.ZanraiIrKategorijos.paragraphPlayWindowTitleRockFm
+        );
+    }
 }

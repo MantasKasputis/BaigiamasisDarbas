@@ -20,6 +20,7 @@
 * Enter country
 * Enter city
 * Enter genre
+* Check if remaining radio options meet expected number (3)
 ### 3. Browsing radio option by genre test:
 * Click on genre (Rock)
 * Click on radio option (Rock FM)
@@ -28,7 +29,9 @@
 * Click on play radio button
 * Click on play radio button in new window
 * Click on stop play radio button in new window
+* Check if play radio window is expected play radio window (Rock FM)
 ### 5. Play music video of the first and last latest songs:
 * Click on first of the latest song video links
 * Close song video
 * Click on tenth of the latest song video links
+* Check if music video attribute is valid (Close window)

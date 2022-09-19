@@ -32,6 +32,9 @@ public class ZanraiIrKategorijosTest extends TestBase {
     @Test
     public void testPlayingRadioRockFmFromNewWindow() {
 
+        String expectedText = "http://5.20.223.18:80/crf128.mp3";
+        String actualText;
+
         HomePages.clickOnZanraiIrKategorijosPageButton();
         ZanraiIrKategorijosPages.clickOnRockGenreFilter();
         ZanraiIrKategorijosPages.clickOnRadioOptionRockFm();
@@ -49,5 +52,8 @@ public class ZanraiIrKategorijosTest extends TestBase {
         ZanraiIrKategorijosPages.sleep(1000);
         ZanraiIrKategorijosPages.clickOnStopPlayRadioOnNewWindow();
         ZanraiIrKategorijosPages.sleep(1000);
+
+        actualText = ZanraiIrKategorijosPages.readPlayWindowTitleRockFm();
+        Assert.assertEquals(actualText, expectedText);
     }
 }
